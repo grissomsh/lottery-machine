@@ -1,0 +1,54 @@
+
+<html>
+<head>
+	<title>麻袋理财抽奖器</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="./main.js"></script>
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="./icon.png">
+</head>
+<body>
+
+
+	<script src="./jquery-3.0.0.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
+
+	<br><br>
+
+
+
+	<div>
+		<div id='ongoing' style="display:none">
+			<div>
+				<div>
+					<button type="button" class="btn btn-default" onclick='generateRandomNumber()' id='lotteryButton'>抽</button>
+					<button type="button" class="btn btn-default" onclick='stop()' id='stopButton' style='display:none'>停</button>
+				</div>
+
+			</div>
+			<h2 id='luckyNumber' value='?'>???</h2>
+		</div>
+
+		<div class="form-group" id='preparation' style="display:block">
+			<div>
+				<label for="usr" >抽奖人数:</label>
+			  	<input type="text" class="form-control" id="numCandidates" type="number" min="1" step="1">
+			  	<button type="button" class="btn btn-default" onclick = 'startNewLottery()'>开始抽奖！</button>
+			</div>
+		</div>
+	</div>
+
+	<button type="button" class="btn btn-default" onclick = 'again()' style="display:none" id='againButton'>再来一次！</button>
+
+	<div class="alert alert-warning alert-dismissible" role="alert" id = 'wrongValueAlert' style="display:None">
+	  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		请输入一个有效的抽奖人数
+	</div>
+
+
+
+	
+
+
+</body>
+</html>
